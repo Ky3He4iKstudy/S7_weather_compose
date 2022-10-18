@@ -1,4 +1,4 @@
-package dev.ky3he4ik.s7_weather_compose.ui.theme
+package dev.ky3he4ik.s7_weather_compose.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

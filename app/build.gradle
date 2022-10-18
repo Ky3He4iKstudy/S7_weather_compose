@@ -1,6 +1,8 @@
 plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id "dagger.hilt.android.plugin"
 }
 
 android {
@@ -58,4 +60,44 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
     androidTestImplementation "androidx.compose.ui:ui-test-junit4:$compose_version"
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
+
+
+    implementation 'androidx.activity:activity-compose:1.5.1'
+    implementation "androidx.constraintlayout:constraintlayout-compose:1.0.1"
+    implementation "com.google.accompanist:accompanist-systemuicontroller:0.26.0-alpha"
+
+
+
+    //hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.datastore:datastore-core:1.0.0-rc01'
+    kapt "com.google.dagger:hilt-compiler:$hilt_version"
+    implementation 'androidx.hilt:hilt-navigation-compose:1.0.0'
+    annotationProcessor 'androidx.hilt:hilt-compiler:1.0.0'
+
+
+    //ROOM DB
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-paging:$room_version"
+
+    // Moshi : Moshi
+    implementation 'com.squareup.moshi:moshi:1.13.0'
+    kapt 'com.squareup.moshi:moshi-kotlin-codegen:1.13.0'
+    implementation 'com.squareup.retrofit2:converter-moshi:2.9.0'
+    implementation("com.squareup.moshi:moshi-kotlin:1.13.0")
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.0'
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+    implementation "com.squareup.retrofit2:adapter-rxjava2:2.9.0"
+    implementation 'joda-time:joda-time:2.10.13'
+
+    implementation "com.github.JamalMulla:ComposePrefs3:1.0.2" // Current is 1.0.2
+    implementation "androidx.datastore:datastore-preferences:1.0.0"
+
+    debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
 }
